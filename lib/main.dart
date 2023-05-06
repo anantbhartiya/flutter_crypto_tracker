@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercryptotracker/screens/homepage.dart';
+import 'package:fluttercryptotracker/screens/homescreen.dart';
+import 'package:fluttercryptotracker/screens/widgets/coincard.dart';
+import 'package:fluttercryptotracker/utils/themes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +14,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-      home: const HomePage()
+      debugShowCheckedModeBanner: false,
+      title: 'Cryptocurrency Tracker',
+      theme: ThemeClass.lightTheme,
+      darkTheme: ThemeClass.darkTheme,
+      themeMode: ThemeMode.system,
+      home: HomeScreen(),
     );
   }
 }
